@@ -6,9 +6,11 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:34:59 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/08 12:36:24 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/09 12:43:46 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

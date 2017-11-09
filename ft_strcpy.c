@@ -6,7 +6,7 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:04:36 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/07 16:07:39 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/09 12:19:15 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strcpy(char *dst, const char *src)
 		i++;
 	}
 	dst[i] = '\0';
-	return (dest);
+	return (dst);
 }

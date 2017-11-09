@@ -6,7 +6,7 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:32:11 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/07 18:10:27 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/09 12:35:45 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		{
 			j++;
 			if (needle[i] == '\0')
-				return ((char*)haystack[i + j]);
+				return ((char*)haystack + i);
 		}
 	}
 	return (0);

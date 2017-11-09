@@ -6,7 +6,7 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:31:37 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/08 17:39:55 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/09 12:55:34 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
+	long nb;
 
 	nb = n;
 	if (nb < 0)
