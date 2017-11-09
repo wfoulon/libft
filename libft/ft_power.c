@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:10:11 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/09 14:58:47 by wfoulon          ###   ########.fr       */
+/*   Created: 2017/11/09 17:11:18 by wfoulon           #+#    #+#             */
+/*   Updated: 2017/11/09 17:13:25 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_power(int nb, int pow)
 {
-	if (ft_strcmp(s1, s2) == 0)
-		return (1);
-	else
+	int i;
+
+	i = nb;
+	if ((nb == 0 && pow != 0) || pow < 0)
 		return (0);
+	if (pow == 0)
+		return (1);
+	while (pow > 1)
+	{
+		nb = nb * i;
+		pow--;
+	}
+	return (nb);
 }

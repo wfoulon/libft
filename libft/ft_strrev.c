@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:10:11 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/09 14:58:47 by wfoulon          ###   ########.fr       */
+/*   Created: 2017/11/09 17:03:14 by wfoulon           #+#    #+#             */
+/*   Updated: 2017/11/09 17:08:48 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+char	*ft_strrev(char *str)
 {
-	if (ft_strcmp(s1, s2) == 0)
-		return (1);
-	else
-		return (0);
+	int		a;
+	int		b;
+	char	temp;
+
+	a = 0;
+	b = 0;
+	while (str[a] != '\0')
+	{
+		a++;
+	}
+	while (b < a)
+	{
+		temp = str[a - 1];
+		str[a - 1] = str[b];
+		str[b] = temp;
+		a--;
+		b++;
+	}
+	return (str);
 }

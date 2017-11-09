@@ -6,7 +6,7 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:57:14 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/08 12:01:45 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/09 15:41:16 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (str[i] == letter)
 			return (str + i);
+		i++;
 	}
 	return (NULL);
 }

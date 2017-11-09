@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:10:11 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/09 14:58:47 by wfoulon          ###   ########.fr       */
+/*   Created: 2017/11/09 17:15:17 by wfoulon           #+#    #+#             */
+/*   Updated: 2017/11/09 17:17:21 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_factorial(int nb)
 {
-	if (ft_strcmp(s1, s2) == 0)
+	int i;
+
+	i = nb - 1;
+	if (nb == 0)
 		return (1);
-	else
+	if (nb < 0 || nb > 12)
 		return (0);
+	while (i >= 1)
+	{
+		nb = i * nb;
+		i--;
+	}
+	return (nb);
 }

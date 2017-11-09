@@ -6,7 +6,7 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:01:55 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/09 11:54:42 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/09 17:18:17 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char		*ft_strncat(char *s1, char *s2, size_t n);
+char		*ft_strncat(char *s1, const char *s2, size_t n);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
@@ -73,5 +73,11 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+char		*ft_itoa(int n);
+char		**ft_strsplit(char const *s, char c);
+void		ft_swap(int *a, int *b);
+char		*ft_strrev(char *str);
+int			ft_power(int nb, int pow);
+int			ft_factorial(int nb);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 09:29:04 by wfoulon           #+#    #+#              #
-#    Updated: 2017/11/09 12:07:55 by wfoulon          ###   ########.fr        #
+#    Updated: 2017/11/09 17:17:47 by wfoulon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,14 @@ SRC 			= 	ft_memset.c \
 					ft_putchar_fd.c \
 					ft_putstr_fd.c \
 					ft_putendl_fd.c \
-					ft_putnbr_fd.c
+					ft_putnbr_fd.c \
+					ft_itoa.c \
+					ft_strsplit.c \
+					ft_isspace.c \
+					ft_swap.c \
+					ft_strrev.c \
+					ft_power.c \
+					ft_factorial.c
 OBJ 			=	$(SRC:.c=.o)
 
 all : $(NAME)
