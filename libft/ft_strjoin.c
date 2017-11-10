@@ -6,7 +6,7 @@
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:46:41 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/08 16:56:39 by wfoulon          ###   ########.fr       */
+/*   Updated: 2017/11/10 12:21:04 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,27 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*ns;
-	unsigned int	i;
-	unsigned int	j;
+	int		a;
+	char	*ret;
 
-	ns = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
-	if (!s1 || !s2 || !ns)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	a = 0;
+	if (!s1 || !s2)
+		return (0);
+	ret = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!ret)
+		return (0);
+	while (*s1)
 	{
-		ns[i] = s1[i];
-		i++;
+		ret[a] = *s1;
+		s1++;
+		a++;
 	}
-	while (s2[j] != '\0')
+	while (*s2)
 	{
-		ns[i + j] = s2[j];
-		j++;
+		ret[a] = *s2;
+		s2++;
+		a++;
 	}
-	ns[i + j] = '\0';
-	return (ns);
+	ret[a] = '\0';
+	return (ret);
 }

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 17:28:58 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/11/10 11:59:03 by wfoulon          ###   ########.fr       */
+/*   Created: 2017/11/10 11:04:20 by wfoulon           #+#    #+#             */
+/*   Updated: 2017/11/10 11:52:08 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	size_t i;
+	t_list	*new;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] != '\0' || s2[i] != '\0') && (s1[i] == s2[i]) && (i < n - 1))
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (lst && *f)
+	{
+		new = (f)(lst);
+		if (new && lst->next)
+			new->next = ft_lstmap(lst->next, f);
+		return (new);
+	}
+	return (NULL);
 }

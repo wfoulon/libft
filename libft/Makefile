@@ -6,7 +6,7 @@
 #    By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 09:29:04 by wfoulon           #+#    #+#              #
-#    Updated: 2017/11/09 17:17:47 by wfoulon          ###   ########.fr        #
+#    Updated: 2017/11/10 10:51:12 by wfoulon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,13 @@ SRC 			= 	ft_memset.c \
 					ft_swap.c \
 					ft_strrev.c \
 					ft_power.c \
-					ft_factorial.c
+					ft_factorial.c \
+					ft_lstnew.c \
+					ft_lstadd.c \
+					ft_lstiter.c \
+					ft_lstmap.c \
+					ft_lstdel.c \
+					ft_lstdelone.c
 OBJ 			=	$(SRC:.c=.o)
 
 all : $(NAME)
