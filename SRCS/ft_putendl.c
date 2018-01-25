@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wfoulon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/08 17:23:12 by wfoulon           #+#    #+#             */
+/*   Updated: 2017/11/09 12:40:56 by wfoulon          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*
+** DESCRIPTION : Affiche la chaine s sur la sortie standard suivi d'un '\n'
+**
+** PARAM #1 : La chaine de caracteres a afficher.
+*/
+
+void	ft_putendl(char const *s)
+{
+	int		i;
+	char	nl;
+
+	i = 0;
+	nl = '\n';
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	write(1, &nl, 1);
+}
